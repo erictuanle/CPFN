@@ -1,0 +1,42 @@
+# GPUs
+CUDA_visible_GPUs:
+    - "0"
+
+# Patch Selection: Model parameters
+batch_size: 16
+miou_loss_multiplier: 1.0
+normal_loss_multiplier: 1.0
+type_loss_multiplier: 1.0
+parameter_loss_multiplier: 1.0
+residue_loss_multiplier: 1.0
+total_loss_multiplier: 1.0
+list_of_primitives:
+    - 'sphere'
+    - 'plane'
+    - 'cylinder'
+    - 'cone'
+n_max_global_instances: 28
+
+# data source
+train_data_file: "train_models.csv"
+train_first_n: -1
+train_data_noisy: true
+train_workers: 4
+val_data_file: "test_models.csv"
+val_first_n: -1
+val_data_noisy: true
+val_workers: 4
+test_data_file: "test_models.csv"
+test_first_n: -1
+test_data_noisy: true
+
+# Patch Selection: Training parameters
+n_epochs: 100
+bn_decay_step: 200000
+decay_step: 200000
+decay_rate: 0.7
+init_learning_rate: 0.001
+val_interval: 5
+snapshot_interval: 10
+visualisation_interval: 50
+weights_folder: 'trained_models'

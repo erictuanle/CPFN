@@ -1,0 +1,9 @@
+h5py
+joblib
+ninja
+numba
+pandas
+pyyaml
+scipy
+tqdm
+visdom

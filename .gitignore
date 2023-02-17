@@ -1,0 +1,7 @@
+.DS_Store
+._*
+*__pycache__/
+data/
+trained_models/
+PointNet2/pointnet2_ops/build/
+PointNet2/pointnet2_ops/cuda_ops.cpython-37m-x86_64-linux-gnu.so
